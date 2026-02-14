@@ -745,3 +745,11 @@ graph LR
 5. **发展趋势**：更智能的代码理解，支持更多编程语言和复杂的代码结构模式
 
 - 插件配置: `lua/pixvim/plugin/editor/mini-ai.lua`
+
+## 2026-02-14
+
+### MagicDuck/grug-far.nvim搜索替换
+
+- `MagicDuck/grug-far.nvim`
+- 搜索替换插件
+- `lua/pixvim/plugins/editor/grug-far.lua`
