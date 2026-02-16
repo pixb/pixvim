@@ -12,11 +12,30 @@
 
 | 插件名 | 作用 |
 | -------------- | --------------- |
+| folke/lazy.nvim | 插件管理器 |
 | akinsho/bufferline.nvim | Buffer栏，提供Buff显示和操作功能 |
 |  lewis6991/gitsigns.nvim | 提供符号列显示Git的变更标记<br>Git一些相关操作 |
 | ellisonleao/gruvbox.nvim  | 颜色主题 |
 | nvim-lualine/lualine.nvim  | 状态栏 |
 | nvim-mini/mini.pairs | 自动补全括号，跳过括号|
+|  folke/snacks.nvim|  文件浏览，选择器插件等诸多通用插件 |
+| stevearc/conform.nvim | 格式化插件 |
+| folke/lazydev.nvim |  自动配置内置lsp |
+| mfussenegger/nvim-lint |  自动配置内置lint补充 |
+| mason-org/mason.nvim | 管理 LSP, DAP, linter 和格式化程序 |
+| nvimtools/none-ls.nvim | 为不支持lsp的的工具也能像lsp工作 |
+| neovim/nvim-lspconfig | 自动配置各个语言的相关配置，使得配置变得简单 |
+| iamcco/markdown-preview.nvim | Markdown预览插件 |
+| MeanderingProgrammer/render-markdown.nvim | 在neovim中渲染markdown |
+| folke/flash.nvim | 快速跳转功能 |
+| MagicDuck/grug-far.nvim | 搜索替换增强 |
+| nvim-mini/mini.ai | 文本对象名词增强 |
+| rafamadriz/friendly-snippets | 不同编程语言的片段组合 |
+| rafamadriz/friendly-snippets | 不同编程语言的片段组合 |
+| folke/which-key.nvim | 按键提示插件 |
+| saghen/blink.cmp | 智能提示插件 |
+| rafamadriz/friendly-snippets | 不同编程语言的片段组合 |
+| mason-org/mason-lspconfig.nvim | 桥接mason和lspconfig的插件 |
 
 ## 快捷键
 
@@ -84,8 +103,6 @@
 
 ### treesitter
 
-### 按键映射表
-
 | 按键 | 功能 | 目标对象 | 说明 |
 |-------|-------|-----------|------|
 | <kbd>]</kbd><kbd>f</kbd> | 跳转到下一个函数的开始 | `@function.outer` | 移动光标到下一个函数的起始位置 |
@@ -101,14 +118,14 @@
 | <kbd>[</kbd><kbd>a</kbd> | 跳转到上一个参数的开始 | `@parameter.inner` | 移动光标到上一个参数的起始位置 |
 | <kbd>[</kbd><kbd>A</kbd> | 跳转到上一个参数的结束 | `@parameter.inner` | 移动光标到上一个参数的结束位置 |
 
-### 按键规律
+#### 按键规律
 
 | 方向 | 开始位置 | 结束位置 |
 |-------|-----------|-----------|
 | 下一个 | <kbd>]</kbd> + 小写字母 | <kbd>]</kbd> + 大写字母 |
 | 上一个 | <kbd>[</kbd> + 小写字母 | <kbd>[</kbd> + 大写字母 |
 
-### 对象类型映射
+#### 对象类型映射
 
 | 字母 | 对象类型 | Treesitter 查询 |
 |-------|-----------|---------------|
@@ -116,7 +133,7 @@
 | <kbd>c</kbd> | 类 | `@class.outer` |
 | <kbd>a</kbd> | 参数 | `@parameter.inner` |
 
-### 代码错误检查开关
+#### 代码错误检查开关
 
 | 按键 | 说明 |
 | -------------- | --------------- |
@@ -143,6 +160,64 @@
 | <kbd>R</kbd> | Treesitter 搜索 | 基于 Treesitter 的搜索功能 |
 | <kbd>Ctrl</kbd>+<kbd>s</kbd> | 切换搜索 | 在命令行模式下切换 Flash 搜索 |
 | <kbd>Ctrl</kbd>+<kbd>Space</kbd> | 增量选择 | 模拟 nvim-treesitter 的增量选择功能 |
+
+### grug-far
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>sr</kbd> | 搜索替换增强 | `grug-far` 增强搜索替换插件 |
+
+### mini.ai
+
+==名词增强==
+
+- **自定义文本对象**：
+  - `o`：代码块（block、条件语句、循环）
+  - `f`：函数（function）
+  - `c`：类（class）
+  - `t`：HTML/XML 标签
+  - `d`：数字
+  - `e`：单词（区分大小写）
+  - `g`：整个缓冲区
+  - `u`/`U`：函数调用
+
+### markdown-preview
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>cp</kbd> | 预览markdown | 预览 markdown 在浏览器中 |
+
+### mason
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>cm</kbd> | Mason管理 | 打开Mason管理面板 |
+
+### nvim-lspconfig
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>cl</kbd> | LSP 信息 | 显示 LSP 配置信息 |
+| <kbd>gd</kbd> | 跳转定义 | 跳转到光标下符号的定义位置 |
+| <kbd>gr</kbd> | 引用查找 | 查找光标下符号的所有引用 |
+| <kbd>gI</kbd> | 跳转实现 | 跳转到光标下符号的实现位置 |
+| <kbd>gy</kbd> | 跳转类型定义 | 跳转到光标下符号的类型定义 |
+| <kbd>gD</kbd> | 跳转声明 | 跳转到光标下符号的声明位置 |
+| <kbd>K</kbd> | 悬浮文档 | 显示光标下符号的文档信息 |
+| <kbd>gK</kbd> | 签名帮助 | 显示函数签名信息 |
+| <kbd>Ctrl</kbd> + <kbd>k</kbd> | 签名帮助 | 插入模式下显示函数签名 |
+| <kbd>LEADER</kbd> + <kbd>ca</kbd> | 代码操作 | 显示可用的代码操作（普通模式、可视模式） |
+| <kbd>LEADER</kbd> + <kbd>cc</kbd> | 运行 Codelens | 执行代码透镜操作（普通模式、可视模式） |
+| <kbd>LEADER</kbd> + <kbd>cC</kbd> | 刷新 Codelens | 刷新并显示代码透镜 |
+| <kbd>LEADER</kbd> + <kbd>cR</kbd> | 重命名文件 | 重命名当前文件并更新引用 |
+| <kbd>LEADER</kbd> + <kbd>cr</kbd> | 重命名符号 | 重命名光标下的符号 |
+| <kbd>LEADER</kbd> + <kbd>cA</kbd> | 源码操作 | 显示源码级别的操作 |
+| <kbd>]]</kbd> | 下一个引用 | 跳转到下一个高亮引用 |
+| <kbd>[[</kbd> | 上一个引用 | 跳转到上一个高亮引用 |
+| <kbd>Alt</kbd> + <kbd>n</kbd> | 下一个引用 | 跳转到下一个高亮引用（带预览） |
+| <kbd>Alt</kbd> + <kbd>p</kbd> | 上一个引用 | 跳转到上一个高亮引用（带预览） |
+
+这些按键提供了完整的 LSP 功能支持，包括导航、代码操作、重命名和引用查找等核心功能。
 
 ## 选项
 
