@@ -43,6 +43,8 @@
 | folke/noice.nvim | 优化 message, cmdline, popupmenu |
 | MunifTanjim/nui.nvim | UI组件库 |
 | nvim-tree/nvim-web-devicons | 该插件为每个图标提供相同的图标和颜色 |
+| folke/persistence.nvim | 会话管理插件 |
+| nvim-lua/plenary.nvim | 函数库插件 |
 
 ## 快捷键
 
@@ -89,24 +91,41 @@
 | <kbd>LEADER</kbd> + <kbd>fe</kbd> | 定位文件位置在文件浏览器(root目录) |
 | <kbd>LEADER</kbd> + <kbd>fE</kbd> | 定位文件位置在文件浏览器(working dir) |
 
-### 通知
+#### 通知
 
 | 按键 | 说明 |
 | -------------- | --------------- |
 | <kbd>LEADER</kbd> + <kbd>n</kbd> | 打开查看通知的历史 |
 | <kbd>LEADER</kbd> + <kbd>un</kbd> | 取消所有显示的通知 |
 
-### Picker中切换root目录
+#### Picker中切换root目录
 
 | 按键 | 说明 |
 | -------------- | --------------- |
 | <kbd>Alt</kbd> + <kbd>c</kbd> | Picker打开时，切换root目录 |
 
-### Snacks picker按键
+#### Snacks picker按键
 
 | 按键 | 说明 |
 | -------------- | --------------- |
 | <kbd>LEADER</kbd> + <kbd>,</kbd> | Picker Buffers |
+
+#### snacks扩展终端模式切换窗口
+
+| 按键 | 功能 | 说明 |
+|------|------|------|
+| <kbd>Ctrl</kbd> + <kbd>h</kbd> | 跳转到左侧窗口 | 在终端模式下切换到左边的窗口 |
+| <kbd>Ctrl</kbd> + <kbd>j</kbd> | 跳转到下方窗口 | 在终端模式下切换到下方的窗口 |
+| <kbd>Ctrl</kbd> + <kbd>k</kbd> | 跳转到上方窗口 | 在终端模式下切换到上方的窗口 |
+| <kbd>Ctrl</kbd> + <kbd>l</kbd> | 跳转到右侧窗口 | 在终端模式下切换到右边的窗口 |
+
+#### snacks全局扩展按键
+
+| 按键 | 功能 | 说明 |
+|------|------|------|
+| <kbd>LEADER</kbd> + <kbd>.</kbd> | 切换临时缓冲区 | 打开或关闭一个临时的草稿缓冲区，用于快速记录想法 |
+| <kbd>LEADER</kbd> + <kbd>S</kbd> | 选择临时缓冲区 | 从已有的临时缓冲区列表中选择一个打开 |
+| <kbd>LEADER</kbd> + <kbd>dps</kbd> | 性能分析临时缓冲区 | 打开一个用于性能分析的临时缓冲区 |
 
 ### treesitter
 
@@ -284,6 +303,15 @@ which-key 插件本身不提供具体功能，而是为其他插件的按键提�
 |------|------|------|------|
 | `<C-f>` | 插入/普通/选择模式 (`i,n,s`) | 向前滚动 | 在 Noice 消息中向前滚动 4 行，如果没有消息则正常滚动 |
 | `<C-b>` | 插入/普通/选择模式 (`i,n,s`) | 向后滚动 | 在 Noice 消息中向后滚动 4 行，如果没有消息则正常滚动 |
+
+### persistence.nvim
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>qs</kbd> | 恢复会话 | 恢复当前目录的会话（包括打开的缓冲区、窗口布局等） |
+| <kbd>LEADER</kbd> + <kbd>qS</kbd> | 选择会话 | 从已保存的会话列表中选择一个进行恢复 |
+| <kbd>LEADER</kbd> + <kbd>ql</kbd> | 恢复最后一次会话 | 恢复最近一次保存的会话 |
+| <kbd>LEADER</kbd> + <kbd>qd</kbd> | 不保存当前会话 | 停止会话保存功能，退出时不保存当前会话状态 |
 
 ## 选项
 
@@ -894,3 +922,24 @@ graph LR
 - `MagicDuck/grug-far.nvim`
 - 搜索替换插件
 - `lua/pixvim/plugins/editor/grug-far.lua`
+
+### 使用snack插件扩展功能
+
+- `lua/pixvim/plugins/editor/snacks.lua`
+
+```lua
+opts = {
+  bigfile = { enabled = true },
+  quickfile = { enabled = true },
+```
+
+- **bigfile**: 大文件优化功能。当打开大文件时，自动禁用一些耗时的功能（如语法高亮、自动格式化等），以提高编辑性能
+- **quickfile**: 快速文件功能，优化文件打开速度
+
+### 添加 persistence 会话管理插件
+
+- `lua/pixvim/plugins/util/presisitence.lua`
+
+### 添加函数库插件 plenary
+
+- `lua/pixvim/plugins/util/plenary.lua`

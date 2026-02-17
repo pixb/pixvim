@@ -52,4 +52,8 @@ require("lazy").setup({
 	{
 		import = "pixvim.plugins.coding",
 	},
+	-- util
+	{
+		import = "pixvim.plugins.util",
+	},
 })
