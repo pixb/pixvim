@@ -36,6 +36,13 @@
 | saghen/blink.cmp | 智能提示插件 |
 | rafamadriz/friendly-snippets | 不同编程语言的片段组合 |
 | mason-org/mason-lspconfig.nvim | 桥接mason和lspconfig的插件 |
+| nvim-treesitter/nvim-treesitter | tree-sitter 编程工具语法高亮，缩进，折叠 |
+| nvim-treesitter/nvim-treesitter-textobjects | 基于语法树的文本对象、选择、移动、交换和查看支持。 |
+| windwp/nvim-ts-autotag | 使用 Treesitter 自动关闭和自动重命名 HTML/XML 标签 |
+| nvim-mini/mini.icons | 图表库 |
+| folke/noice.nvim | 优化 message, cmdline, popupmenu |
+| MunifTanjim/nui.nvim | UI组件库 |
+| nvim-tree/nvim-web-devicons | 该插件为每个图标提供相同的图标和颜色 |
 
 ## 快捷键
 
@@ -218,6 +225,65 @@
 | <kbd>Alt</kbd> + <kbd>p</kbd> | 上一个引用 | 跳转到上一个高亮引用（带预览） |
 
 这些按键提供了完整的 LSP 功能支持，包括导航、代码操作、重命名和引用查找等核心功能。
+
+### which-key
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>?</kbd> | 缓冲区按键映射 | 显示当前缓冲区的按键映射（非全局） |
+| <kbd>Ctrl</kbd> + <kbd>w</kbd> + <kbd>Space</kbd> | 窗口模式 | 显示窗口相关的按键映射 |
+
+#### 按键前缀分组
+
+| 按键前缀 | 分组名称 | 详细说明 |
+|----------|----------|----------|
+| <kbd>LEADER</kbd> + <kbd>Tab</kbd> | tabs | 标签页相关操作 |
+| <kbd>LEADER</kbd> + <kbd>c</kbd> | code | 代码相关操作 |
+| <kbd>LEADER</kbd> + <kbd>d</kbd> | debug | 调试相关操作 |
+| <kbd>LEADER</kbd> + <kbd>dp</kbd> | profiler | 性能分析相关操作 |
+| <kbd>LEADER</kbd> + <kbd>f</kbd> | file/find | 文件和查找相关操作 |
+| <kbd>LEADER</kbd> + <kbd>g</kbd> | git | Git 相关操作 |
+| <kbd>LEADER</kbd> + <kbd>gh</kbd> | hunks | Git 变更块相关操作 |
+| <kbd>LEADER</kbd> + <kbd>q</kbd> | quit/session | 退出和会话相关操作 |
+| <kbd>LEADER</kbd> + <kbd>s</kbd> | search | 搜索相关操作 |
+| <kbd>LEADER</kbd> + <kbd>u</kbd> | ui | 界面相关操作 |
+| <kbd>LEADER</kbd> + <kbd>x</kbd> | diagnostics/quickfix | 诊断和快速修复相关操作 |
+| <kbd>LEADER</kbd> + <kbd>b</kbd> | buffer | 缓冲区相关操作（动态扩展） |
+| <kbd>LEADER</kbd> + <kbd>w</kbd> | windows | 窗口相关操作（代理到 `<c-w>`） |
+| <kbd>[</kbd> | prev | 上一个相关操作 |
+| <kbd>]</kbd> | next | 下一个相关操作 |
+| <kbd>g</kbd> | goto | 跳转相关操作 |
+| <kbd>gs</kbd> | surround | 包围相关操作 |
+| <kbd>z</kbd> | fold | 折叠相关操作 |
+| <kbd>gx</kbd> | 系统应用打开 | 使用系统默认应用打开光标下的链接或文件 |
+
+which-key 插件本身不提供具体功能，而是为其他插件的按键提供可视化的帮助和分组管理，让用户更容易记住和使用各种快捷键。
+
+### Noice 插件按键映射
+
+#### 消息管理（普通模式）
+
+| 按键 | 功能 | 说明 |
+|------|------|------|
+| `<leader>sn` | Noice 菜单组 | 打开 Noice 相关命令的前缀键 |
+| `<leader>snl` | 最后一条消息 | 显示 Noice 记录的最后一条消息 |
+| `<leader>snh` | 消息历史 | 查看 Noice 的消息历史记录 |
+| `<leader>sna` | 所有消息 | 显示所有 Noice 消息 |
+| `<leader>snd` | 清除所有 | 关闭/清除所有 Noice 消息 |
+| `<leader>snt` | 消息选择器 | 使用 Telescope 或 FzfLua 选择消息 |
+
+#### 命令行模式
+
+| 按键 | 模式 | 功能 | 说明 |
+|------|------|------|------|
+| `<S-Enter>` | 命令行模式 (`c`) | 重定向命令行 | 将当前命令行内容重定向到其他地方 |
+
+#### 滚动控制（多模式）
+
+| 按键 | 模式 | 功能 | 说明 |
+|------|------|------|------|
+| `<C-f>` | 插入/普通/选择模式 (`i,n,s`) | 向前滚动 | 在 Noice 消息中向前滚动 4 行，如果没有消息则正常滚动 |
+| `<C-b>` | 插入/普通/选择模式 (`i,n,s`) | 向后滚动 | 在 Noice 消息中向后滚动 4 行，如果没有消息则正常滚动 |
 
 ## 选项
 
