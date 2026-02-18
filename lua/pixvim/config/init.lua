@@ -209,7 +209,7 @@ function M.setup(opts)
 					end
 				end
 			end
-			local lazyvim_plugins = find("^pixvim%.plugins$")
+			local pixvim_plugins = find("^pixvim%.plugins$")
 			local plugins = find("^plugins$") or math.huge
 			if pixvim_plugins ~= 1 then
 				local msg = {

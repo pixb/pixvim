@@ -127,6 +127,81 @@
 | <kbd>LEADER</kbd> + <kbd>S</kbd> | 选择临时缓冲区 | 从已有的临时缓冲区列表中选择一个打开 |
 | <kbd>LEADER</kbd> + <kbd>dps</kbd> | 性能分析临时缓冲区 | 打开一个用于性能分析的临时缓冲区 |
 
+#### snacks picker
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>,</kbd> | 缓冲区列表 | 显示打开的缓冲区列表 |
+| <kbd>LEADER</kbd> + <kbd>/</kbd> | 根目录搜索 | 在项目根目录中进行 Grep 搜索 |
+| <kbd>LEADER</kbd> + <kbd>:</kbd> | 命令历史 | 显示命令历史记录 |
+| <kbd>LEADER</kbd> + <kbd>Space</kbd> | 根目录文件查找 | 在项目根目录中查找文件 |
+| <kbd>LEADER</kbd> + <kbd>n</kbd> | 通知历史 | 显示通知历史记录 |
+
+#### 查找文件相关 (<kbd>LEADER</kbd> + <kbd>f</kbd>)
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>fb</kbd> | 缓冲区列表 | 显示打开的缓冲区列表 |
+| <kbd>LEADER</kbd> + <kbd>fB</kbd> | 所有缓冲区 | 显示所有缓冲区（包括隐藏和非文件） |
+| <kbd>LEADER</kbd> + <kbd>fc</kbd> | 配置文件 | 查找配置文件 |
+| <kbd>LEADER</kbd> + <kbd>ff</kbd> | 根目录文件 | 在项目根目录中查找文件 |
+| <kbd>LEADER</kbd> + <kbd>fF</kbd> | 当前目录文件 | 在当前目录中查找文件 |
+| <kbd>LEADER</kbd> + <kbd>fg</kbd> | Git 文件 | 查找 Git 仓库中的文件 |
+| <kbd>LEADER</kbd> + <kbd>fr</kbd> | 最近文件 | 显示最近打开的文件 |
+| <kbd>LEADER</kbd> + <kbd>fR</kbd> | 当前目录最近文件 | 显示当前目录的最近文件 |
+| <kbd>LEADER</kbd> + <kbd>fp</kbd> | 项目列表 | 显示项目列表 |
+
+#### Git 相关 (<kbd>LEADER</kbd> + <kbd>g</kbd>)
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>gd</kbd> | Git Diff | 显示 Git 变更块 |
+| <kbd>LEADER</kbd> + <kbd>gD</kbd> | Git 与 Origin 比较 | 与 Origin 分支的差异比较 |
+| <kbd>LEADER</kbd> + <kbd>gs</kbd> | Git 状态 | 显示 Git 状态 |
+| <kbd>LEADER</kbd> + <kbd>gS</kbd> | Git Stash | 显示 Git Stash 列表 |
+| <kbd>LEADER</kbd> + <kbd>gi</kbd> | GitHub Issues | 显示打开的 GitHub Issues |
+| <kbd>LEADER</kbd> + <kbd>gI</kbd> | 所有 GitHub Issues | 显示所有 GitHub Issues |
+| <kbd>LEADER</kbd> + <kbd>gp</kbd> | GitHub PRs | 显示打开的 GitHub Pull Requests |
+| <kbd>LEADER</kbd> + <kbd>gP</kbd> | 所有 GitHub PRs | 显示所有 GitHub Pull Requests |
+
+#### 搜索相关 (<kbd>LEADER</kbd> + <kbd>s</kbd>)
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>sb</kbd> | 缓冲区行 | 搜索缓冲区中的行 |
+| <kbd>LEADER</kbd> + <kbd>sB</kbd> | 缓冲区内容搜索 | 在打开的缓冲区中进行 Grep 搜索 |
+| <kbd>LEADER</kbd> + <kbd>sg</kbd> | 根目录实时搜索 | 在项目根目录中进行实时 Grep 搜索 |
+| <kbd>LEADER</kbd> + <kbd>sG</kbd> | 当前目录实时搜索 | 在当前目录中进行实时 Grep 搜索 |
+| <kbd>LEADER</kbd> + <kbd>sp</kbd> | 插件配置搜索 | 搜索插件配置 |
+| <kbd>LEADER</kbd> + <kbd>sw</kbd> | 单词/选区搜索 | 搜索光标下单词或选区内容（根目录） |
+| <kbd>LEADER</kbd> + <kbd>sW</kbd> | 单词/选区搜索 | 搜索光标下单词或选区内容（当前目录） |
+| <kbd>LEADER</kbd> + <kbd>s"</kbd> | 寄存器 | 显示寄存器内容 |
+| <kbd>LEADER</kbd> + <kbd>s/</kbd> | 搜索历史 | 显示搜索历史记录 |
+| <kbd>LEADER</kbd> + <kbd>sa</kbd> | 自动命令 | 显示自动命令列表 |
+| <kbd>LEADER</kbd> + <kbd>sc</kbd> | 命令历史 | 显示命令历史记录 |
+| <kbd>LEADER</kbd> + <kbd>sC</kbd> | 命令列表 | 显示可用命令列表 |
+| <kbd>LEADER</kbd> + <kbd>sd</kbd> | 诊断信息 | 显示所有缓冲区的诊断信息 |
+| <kbd>LEADER</kbd> + <kbd>sD</kbd> | 当前缓冲区诊断 | 显示当前缓冲区的诊断信息 |
+| <kbd>LEADER</kbd> + <kbd>sh</kbd> | 帮助页面 | 搜索帮助页面 |
+| <kbd>LEADER</kbd> + <kbd>sH</kbd> | 高亮组 | 显示高亮组列表 |
+| <kbd>LEADER</kbd> + <kbd>si</kbd> | 图🧠标 | 显示可用图标 |
+| <kbd>LEADER</kbd> + <kbd>sj</kbd> | 跳转列表 | 显示跳转历史 |
+| <kbd>LEADER</kbd> + <kbd>sk</kbd> | 按键映射 | 显示按键映射 |
+| <kbd>LEADER</kbd> + <kbd>sl</kbd> | 位置列表 | 显示位置列表 |
+| <kbd>LEADER</kbd> + <kbd>sM</kbd> | 手册页 | 搜索手册页 |
+| <kbd>LEADER</kbd> + <kbd>sm</kbd> | 标记 | 显示标记列表 |
+| <kbd>LEADER</kbd> + <kbd>sR</kbd> | 恢复搜索 | 恢复之前的搜索 |
+| <kbd>LEADER</kbd> + <kbd>sq</kbd> | 快速修复列表 | 显示快速修复列表 |
+| <kbd>LEADER</kbd> + <kbd>su</kbd> | 撤销树 | 显示撤销历史树 |
+
+#### UI 相关 (<kbd>LEADER</kbd> + <kbd>u</kbd>)
+
+| 按键 | 功能 | 详细说明 |
+|------|------|----------|
+| <kbd>LEADER</kbd> + <kbd>uC</kbd> | 颜色方案 | 显示并切换颜色方案 |
+
+`snacks_picker` 是一个功能强大的选择器插件，提供了丰富的搜索和导航功能，通过这些快捷键可以快速访问各种 Vim/Neovim 功能。
+
 ### treesitter
 
 | 按键 | 功能 | 目标对象 | 说明 |
