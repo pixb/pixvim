@@ -132,7 +132,16 @@ vim.keymap.set("n", "<leader>td", function()
 	end
 end, { desc = "Toggle diagnostics" })
 
--- 切换文件树
--- map("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true, desc = "切换文件树" })
--- 定位当前文件
--- map("n", "<leader>f", ":NvimTreeFindFile<CR>", { noremap = true, silent = true, desc = "定位当前文件" })
+-- floating terminal
+map("n", "<leader>fT", function()
+	Snacks.terminal()
+end, { desc = "Terminal (cwd)" })
+map("n", "<leader>ft", function()
+	Snacks.terminal(nil, { cwd = PixVim.root() })
+end, { desc = "Terminal (Root Dir)" })
+map({ "n", "t" }, "<c-/>", function()
+	Snacks.terminal(nil, { cwd = PixVim.root() })
+end, { desc = "Terminal (Root Dir)" })
+map({ "n", "t" }, "<c-_>", function()
+	Snacks.terminal(nil, { cwd = PixVim.root() })
+end, { desc = "which_key_ignore" })
