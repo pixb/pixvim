@@ -56,4 +56,8 @@ require("lazy").setup({
 	{
 		import = "pixvim.plugins.util",
 	},
+	-- lang
+	{
+		import = "pixvim.plugins.lang",
+	},
 })

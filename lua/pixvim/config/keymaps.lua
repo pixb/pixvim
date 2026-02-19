@@ -110,6 +110,13 @@ map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 -- 使用 <leader>`（反引号）作为 <leader>bb 的替代快捷键
 -- 反引号 ` 在 Vim 中传统上就代表“交替文件”（#），此处延续这一惯例
 map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+map("n", "<leader>bd", function()
+	Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
+map("n", "<leader>bo", function()
+	Snacks.bufdelete.other()
+end, { desc = "Delete Other Buffers" })
+map("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 
 -- 完整的诊断控制快捷键
 vim.keymap.set("n", "<leader>td", function()

@@ -1018,3 +1018,24 @@ opts = {
 ### 添加函数库插件 plenary
 
 - `lua/pixvim/plugins/util/plenary.lua`
+
+## 2026-02-19
+
+需要引入的扩展插件配置, 参考LazyVim.
+
+```lua
+    { import = "lazyvim.plugins.extras.dap.core" },
+    { import = "lazyvim.plugins.extras.lang.markdown" },
+    { import = "lazyvim.plugins.extras.editor.outline" },
+    { import = "lazyvim.plugins.extras.util.dot" },
+    { import = "lazyvim.plugins.extras.lang.clangd" },
+    { import = "lazyvim.plugins.extras.lang.cmake" },
+    { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.go" },
+    { import = "lazyvim.plugins.extras.coding.luasnip" },
+    { import = "lazyvim.plugins.extras.coding.mini-surround" }
+```
+
+### 引入go开发
+
+- `lua/pixvim/plugins/lang/go.lua`
