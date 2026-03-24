@@ -1068,3 +1068,9 @@ map({"n","t"}, "<c-_>",function() Snacks.terminal(nil, { cwd = LazyVim.root() })
 ### 引入surround插件
 
 - `lua/pixvim/plugins/coding/surround.lua`
+
+## 2026-03-24
+
+### 添加对json文件的支持
+
+- `lua/pixvim/plugins/lang/json.lua`
