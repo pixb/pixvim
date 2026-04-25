@@ -1074,3 +1074,9 @@ map({"n","t"}, "<c-_>",function() Snacks.terminal(nil, { cwd = LazyVim.root() })
 ### 添加对json文件的支持
 
 - `lua/pixvim/plugins/lang/json.lua`
+
+## 2026-04-25
+
+### 颜色显示
+
+- `lua/pixvim/plugins/util/mini-hipatterns.lua`
