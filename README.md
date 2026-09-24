@@ -14,14 +14,14 @@
 | -------------- | --------------- |
 | folke/lazy.nvim | 插件管理器 |
 | akinsho/bufferline.nvim | Buffer栏，提供Buff显示和操作功能 |
-|  lewis6991/gitsigns.nvim | 提供符号列显示Git的变更标记<br>Git一些相关操作 |
-| ellisonleao/gruvbox.nvim  | 颜色主题 |
-| nvim-lualine/lualine.nvim  | 状态栏 |
-| nvim-mini/mini.pairs | 自动补全括号，跳过括号|
-|  folke/snacks.nvim|  文件浏览，选择器插件等诸多通用插件 |
+| lewis6991/gitsigns.nvim | 提供符号列显示Git的变更标记<br>Git一些相关操作 |
+| ellisonleao/gruvbox.nvim | 颜色主题 |
+| nvim-lualine/lualine.nvim | 状态栏 |
+| nvim-mini/mini.pairs | 自动补全括号，跳过括号 |
+| folke/snacks.nvim | 文件浏览，选择器插件等诸多通用插件 |
 | stevearc/conform.nvim | 格式化插件 |
-| folke/lazydev.nvim |  自动配置内置lsp |
-| mfussenegger/nvim-lint |  自动配置内置lint补充 |
+| folke/lazydev.nvim | 自动配置内置lsp |
+| mfussenegger/nvim-lint | 自动配置内置lint补充 |
 | mason-org/mason.nvim | 管理 LSP, DAP, linter 和格式化程序 |
 | nvimtools/none-ls.nvim | 为不支持lsp的的工具也能像lsp工作 |
 | neovim/nvim-lspconfig | 自动配置各个语言的相关配置，使得配置变得简单 |
@@ -31,10 +31,8 @@
 | MagicDuck/grug-far.nvim | 搜索替换增强 |
 | nvim-mini/mini.ai | 文本对象名词增强 |
 | rafamadriz/friendly-snippets | 不同编程语言的片段组合 |
-| rafamadriz/friendly-snippets | 不同编程语言的片段组合 |
 | folke/which-key.nvim | 按键提示插件 |
 | saghen/blink.cmp | 智能提示插件 |
-| rafamadriz/friendly-snippets | 不同编程语言的片段组合 |
 | mason-org/mason-lspconfig.nvim | 桥接mason和lspconfig的插件 |
 | nvim-treesitter/nvim-treesitter | tree-sitter 编程工具语法高亮，缩进，折叠 |
 | nvim-treesitter/nvim-treesitter-textobjects | 基于语法树的文本对象、选择、移动、交换和查看支持。 |
@@ -114,7 +112,7 @@
 #### snacks扩展终端模式切换窗口
 
 | 按键 | 功能 | 说明 |
-|------|------|------|
+| ------ | ------ | ------ |
 | <kbd>Ctrl</kbd> + <kbd>h</kbd> | 跳转到左侧窗口 | 在终端模式下切换到左边的窗口 |
 | <kbd>Ctrl</kbd> + <kbd>j</kbd> | 跳转到下方窗口 | 在终端模式下切换到下方的窗口 |
 | <kbd>Ctrl</kbd> + <kbd>k</kbd> | 跳转到上方窗口 | 在终端模式下切换到上方的窗口 |
@@ -123,7 +121,7 @@
 #### snacks全局扩展按键
 
 | 按键 | 功能 | 说明 |
-|------|------|------|
+| ------ | ------ | ------ |
 | <kbd>LEADER</kbd> + <kbd>.</kbd> | 切换临时缓冲区 | 打开或关闭一个临时的草稿缓冲区，用于快速记录想法 |
 | <kbd>LEADER</kbd> + <kbd>S</kbd> | 选择临时缓冲区 | 从已有的临时缓冲区列表中选择一个打开 |
 | <kbd>LEADER</kbd> + <kbd>dps</kbd> | 性能分析临时缓冲区 | 打开一个用于性能分析的临时缓冲区 |
@@ -131,7 +129,7 @@
 #### snacks picker
 
 | 按键 | 功能 | 详细说明 |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | <kbd>LEADER</kbd> + <kbd>,</kbd> | 缓冲区列表 | 显示打开的缓冲区列表 |
 | <kbd>LEADER</kbd> + <kbd>/</kbd> | 根目录搜索 | 在项目根目录中进行 Grep 搜索 |
 | <kbd>LEADER</kbd> + <kbd>:</kbd> | 命令历史 | 显示命令历史记录 |
@@ -141,7 +139,7 @@
 #### 查找文件相关 (<kbd>LEADER</kbd> + <kbd>f</kbd>)
 
 | 按键 | 功能 | 详细说明 |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | <kbd>LEADER</kbd> + <kbd>fb</kbd> | 缓冲区列表 | 显示打开的缓冲区列表 |
 | <kbd>LEADER</kbd> + <kbd>fB</kbd> | 所有缓冲区 | 显示所有缓冲区（包括隐藏和非文件） |
 | <kbd>LEADER</kbd> + <kbd>fc</kbd> | 配置文件 | 查找配置文件 |
@@ -155,7 +153,7 @@
 #### Git 相关 (<kbd>LEADER</kbd> + <kbd>g</kbd>)
 
 | 按键 | 功能 | 详细说明 |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | <kbd>LEADER</kbd> + <kbd>gd</kbd> | Git Diff | 显示 Git 变更块 |
 | <kbd>LEADER</kbd> + <kbd>gD</kbd> | Git 与 Origin 比较 | 与 Origin 分支的差异比较 |
 | <kbd>LEADER</kbd> + <kbd>gs</kbd> | Git 状态 | 显示 Git 状态 |
@@ -168,7 +166,7 @@
 #### 搜索相关 (<kbd>LEADER</kbd> + <kbd>s</kbd>)
 
 | 按键 | 功能 | 详细说明 |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | <kbd>LEADER</kbd> + <kbd>sb</kbd> | 缓冲区行 | 搜索缓冲区中的行 |
 | <kbd>LEADER</kbd> + <kbd>sB</kbd> | 缓冲区内容搜索 | 在打开的缓冲区中进行 Grep 搜索 |
 | <kbd>LEADER</kbd> + <kbd>sg</kbd> | 根目录实时搜索 | 在项目根目录中进行实时 Grep 搜索 |
@@ -206,7 +204,7 @@
 ### treesitter
 
 | 按键 | 功能 | 目标对象 | 说明 |
-|-------|-------|-----------|------|
+| ------- | ------- | ----------- | ------ |
 | <kbd>]</kbd><kbd>f</kbd> | 跳转到下一个函数的开始 | `@function.outer` | 移动光标到下一个函数的起始位置 |
 | <kbd>]</kbd><kbd>F</kbd> | 跳转到下一个函数的结束 | `@function.outer` | 移动光标到下一个函数的结束位置 |
 | <kbd>[</kbd><kbd>f</kbd> | 跳转到上一个函数的开始 | `@function.outer` | 移动光标到上一个函数的起始位置 |
@@ -223,14 +221,14 @@
 #### 按键规律
 
 | 方向 | 开始位置 | 结束位置 |
-|-------|-----------|-----------|
+| ------- | ----------- | ----------- |
 | 下一个 | <kbd>]</kbd> + 小写字母 | <kbd>]</kbd> + 大写字母 |
 | 上一个 | <kbd>[</kbd> + 小写字母 | <kbd>[</kbd> + 大写字母 |
 
 #### 对象类型映射
 
 | 字母 | 对象类型 | Treesitter 查询 |
-|-------|-----------|---------------|
+| ------- | ----------- | --------------- |
 | <kbd>f</kbd> | 函数 | `@function.outer` |
 | <kbd>c</kbd> | 类 | `@class.outer` |
 | <kbd>a</kbd> | 参数 | `@parameter.inner` |
@@ -244,7 +242,7 @@
 ### Flash 插件快捷键
 
 | 按键 | 模式 | 说明 |
-|------|------|------|
+| ------ | ------ | ------ |
 | <kbd>s</kbd> | 普通模式、可视模式、操作符等待模式 | Flash 跳转 |
 | <kbd>S</kbd> | 普通模式、可视模式、操作符等待模式 | Flash Treesitter 跳转 |
 | <kbd>r</kbd> | 操作符等待模式 | 远程 Flash |
@@ -255,7 +253,7 @@
 ==快捷键说明==
 
 | 按键 | 功能 | 详细说明 |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | <kbd>s</kbd> | Flash 跳转 | 快速跳转到标签、光标位置等 |
 | <kbd>S</kbd> | Flash Treesitter | 基于 Treesitter 语法树的跳转 |
 | <kbd>r</kbd> | 远程 Flash | 远程跳转功能 |
@@ -298,7 +296,7 @@
 ### nvim-lspconfig
 
 | 按键 | 功能 | 详细说明 |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | <kbd>LEADER</kbd> + <kbd>cl</kbd> | LSP 信息 | 显示 LSP 配置信息 |
 | <kbd>gd</kbd> | 跳转定义 | 跳转到光标下符号的定义位置 |
 | <kbd>gr</kbd> | 引用查找 | 查找光标下符号的所有引用 |
@@ -331,7 +329,7 @@
 #### 按键前缀分组
 
 | 按键前缀 | 分组名称 | 详细说明 |
-|----------|----------|----------|
+| ---------- | ---------- | ---------- |
 | <kbd>LEADER</kbd> + <kbd>Tab</kbd> | tabs | 标签页相关操作 |
 | <kbd>LEADER</kbd> + <kbd>c</kbd> | code | 代码相关操作 |
 | <kbd>LEADER</kbd> + <kbd>d</kbd> | debug | 调试相关操作 |
@@ -359,7 +357,7 @@ which-key 插件本身不提供具体功能，而是为其他插件的按键提�
 #### 消息管理（普通模式）
 
 | 按键 | 功能 | 说明 |
-|------|------|------|
+| ------ | ------ | ------ |
 | `<leader>sn` | Noice 菜单组 | 打开 Noice 相关命令的前缀键 |
 | `<leader>snl` | 最后一条消息 | 显示 Noice 记录的最后一条消息 |
 | `<leader>snh` | 消息历史 | 查看 Noice 的消息历史记录 |
@@ -383,7 +381,7 @@ which-key 插件本身不提供具体功能，而是为其他插件的按键提�
 ### persistence.nvim
 
 | 按键 | 功能 | 详细说明 |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | <kbd>LEADER</kbd> + <kbd>qs</kbd> | 恢复会话 | 恢复当前目录的会话（包括打开的缓冲区、窗口布局等） |
 | <kbd>LEADER</kbd> + <kbd>qS</kbd> | 选择会话 | 从已保存的会话列表中选择一个进行恢复 |
 | <kbd>LEADER</kbd> + <kbd>ql</kbd> | 恢复最后一次会话 | 恢复最近一次保存的会话 |
@@ -392,7 +390,7 @@ which-key 插件本身不提供具体功能，而是为其他插件的按键提�
 ### nvim-mini/mini.surround
 
 | 按键 | 功能 | 详细说明 |
-|:----:|------|----------|
+| :----: | ------ | ---------- |
 | <kbd>gsa</kbd> | 添加环绕 | Normal/Visual 模式下添加环绕符号 |
 | <kbd>gsd</kbd> | 删除环绕 | 删除现有的环绕符号 |
 | <kbd>gsf</kbd> | 查找右侧环绕 | 向右查找环绕符号 |
@@ -406,7 +404,7 @@ which-key 插件本身不提供具体功能，而是为其他插件的按键提�
 | 设置 leader 键配置 | 说明 |
 | -------------- | --------------- |
 | `vim.g.mapleader = " "` | LEADER |
-| `vim.g.maplocalleader = "\\"`|LOCALLEADER|
+| `vim.g.maplocalleader = "\\"` | LOCALLEADER |
 
 | 基本配置 | 说明 |
 | -------------- | --------------- |
@@ -433,7 +431,7 @@ which-key 插件本身不提供具体功能，而是为其他插件的按键提�
 
 | 文件处理 | 说明 |
 | -------------- | --------------- |
-|`vim.opt.autoread = true`| 自动读取外部修改的文件|
+| `vim.opt.autoread = true` | 自动读取外部修改的文件 |
 
 剪贴板
 
@@ -773,7 +771,7 @@ words = { enabled = true },
 可以用于跳转
 
 | 查询 | 说明 |
-|-------|------|
+| ------- | ------ |
 | `@function.outer` | 整个函数 |
 | `@function.inner` | 函数体 |
 | `@class.outer` | 整个类 |

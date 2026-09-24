@@ -69,7 +69,7 @@ opt.completeopt = "menu,menuone,noselect"
 
 -- Hide * markup for bold and italic, but not markers with substitutions
 -- 可隐藏标记的显示方式: 2精简显示
-opt.conceallevel = 2
+opt.conceallevel = 0
 
 -- Confirm to save changes before exiting modified buffer
 -- 开启退出前确认
