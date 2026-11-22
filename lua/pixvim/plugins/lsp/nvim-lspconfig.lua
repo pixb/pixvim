@@ -131,6 +131,15 @@ return {
 						}, -- Lua
 					}, -- settings
 				}, -- luals
+				-- bash/sh 语言服务器：显式声明，确保 gd 等 LSP 快捷键稳定可用
+				bashls = {
+					settings = {
+						bashIde = {
+							-- 递归扫描整个 workspace，支持跨文件跳转到函数定义
+							globPattern = "**/*@(.sh|.inc|.bash|.command)",
+						},
+					},
+				}, -- bashls
 			}, --servers
 			-- you can do any additional lsp server setup here
 			-- return true if you don't want this server to be setup with lspconfig
